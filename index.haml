@@ -1,0 +1,298 @@
+!!!
+%html
+  %head
+    %meta{ charset: "utf-8" }/
+    %title Try-Bulma CSS framework
+    %link{ rel: "stylesheet", type: "text/css", href: "css/vendor/bulma.css" }
+    -# :css
+    -#   .tile { background: rgba(220, 220, 220, 0.3); border: 1px solid rgba(20, 20, 20, 0.3) }
+  %body
+    -# .container.is-fluid
+    .container
+      .notification
+        test
+
+        %a{ href: "#", class: "button is-primary is-loading" } Button
+
+        -# tiles
+
+      .tile.is-ancestor
+        .tile.is-4.is-vertical.is-parent
+          .tile.is-child.box
+            %p.title One
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+          .tile.is-child.box
+            %p.title Two
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+        .tile.is-parent
+          .tile.is-child.box
+            %p.title Three
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.
+            %p Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget varius ligula, at volutpat tortor.
+            %p Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non semper leo.
+
+
+
+      -# box / media
+
+      .box
+        %article.media
+          .media-left
+            %figure.image.is-64x64
+              %img{:alt => "Image", :src => "http://placehold.it/128x128"}/
+          .media-content
+            .content
+              %p
+                %strong John Smith
+                %small @johnsmith
+                %small 31m
+                %br/
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+            %nav.level
+              .level-left
+                %a.level-item
+                  %span.icon.is-small
+                    %i.fa.fa-reply
+                %a.level-item
+                  %span.icon.is-small
+                    %i.fa.fa-retweet
+                %a.level-item
+                  %span.icon.is-small
+                    %i.fa.fa-heart
+
+
+
+      -# form
+
+      .box
+        %label.label Name
+        %p.control
+          %input.input{:placeholder => "Text input", :type => "text"}/
+        %label.label Username
+        %p.control.has-icon.has-icon-right
+          %input.input.is-success{:placeholder => "Text input", :type => "text", :value => "bulma"}/
+          %i.fa.fa-check
+          %span.help.is-success This username is available
+        %label.label Email
+        %p.control.has-icon.has-icon-right
+          %input.input.is-danger{:placeholder => "Email input", :type => "text", :value => "hello@"}/
+          %i.fa.fa-warning
+          %span.help.is-danger This email is invalid
+        %label.label Subject
+        %p.control
+          %span.select
+            %select
+              %option Select dropdown
+              %option With options
+        %label.label Message
+        %p.control
+          %textarea.textarea{:placeholder => "Textarea"}
+        %p.control
+          %button.button.is-primary Submit
+          %button.button.is-link Cancel
+
+      -# images, support for retina images
+      -#
+      -# .box
+      -#   %figure.image.is-128x128
+      -#     %img{:src => "http://placehold.it/640x320"}/
+
+
+
+      -# notifications
+
+      .box
+        .notification.is-success
+          %button.delete
+          Success lorem ipsum dolor sit amet, consectetur
+          adipiscing elit lorem ipsum dolor sit amet,
+          consectetur adipiscing elit
+
+
+      -# tables
+
+      .box
+        %table.table
+          %thead
+            %tr
+              %th Name
+              %th Instrument
+              %th
+              %th
+          %tbody
+            %tr
+              %td Misty Abbott
+              %td Bass Guitar
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-instagram
+            %tr
+              %td John Smith
+              %td Rhythm Guitar
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-instagram
+            %tr
+              %td Robert Mikels
+              %td Lead Guitar
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-instagram
+            %tr
+              %td Karyn Holmberg
+              %td Drums
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %td.is-icon
+                %a{:href => "#"}
+                  %i.fa.fa-instagram
+
+
+
+      -# components
+      -#
+      -# components / cards
+
+      .box
+        .card
+          .card-image
+            %figure.image.is-4by3
+              %img{:alt => "", :src => "http://placehold.it/300x225"}/
+          .card-content
+            .media
+              .media-left
+                %figure.image.is-32x32
+                  %img{:alt => "Image", :src => "http://placehold.it/64x64"}/
+              .media-content
+                %p.title.is-5 John Smith
+                %p.subtitle.is-6 @johnsmith
+            .content
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Phasellus nec iaculis mauris.
+              = succeed "." do
+                %a{:href => "#"} @bulmaio
+              %a{:href => "#"} #css
+              %a{:href => "#"} #responsive
+              %br/
+              %small 11:09 PM - 1 Jan 2016
+
+      .box
+        .card.is-fullwidth
+          %header.card-header
+            %p.card-header-title
+              Component
+            %a.card-header-icon
+              %i.fa.fa-angle-down
+          .card-content
+            .content
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              = succeed "." do
+                %a{:href => "#"} @bulmaio
+              %a{:href => "#"} #css
+              %a{:href => "#"} #responsive
+              %br/
+              %small 11:09 PM - 1 Jan 2016
+          %footer.card-footer
+            %a.card-footer-item Save
+            %a.card-footer-item Edit
+            %a.card-footer-item Delete
+
+      .box
+        .card
+          %header.card-header
+            %p.card-header-title
+              Component
+            %a.card-header-icon
+              %i.fa.fa-angle-down
+          .card-content
+            .content
+              Lorem ipsum ...
+          %footer.card-footer
+            %a.card-footer-item Save
+            %a.card-footer-item Edit
+            %a.card-footer-item Delete
+
+      -# components / level
+
+      .box
+        %nav.level
+          .level-item.has-text-centered
+            %p.heading Tweets
+            %p.title 3,456
+          .level-item.has-text-centered
+            %p.heading Following
+            %p.title 123
+          .level-item.has-text-centered
+            %p.heading Followers
+            %p.title 456K
+          .level-item.has-text-centered
+            %p.heading Likes
+            %p.title 789
+
+
+      -# components / media
+
+      .box
+        %article.media
+          %figure.media-left
+            %p.image.is-64x64
+              %img{:src => "http://placehold.it/128x128"}/
+          .media-content
+            %p.control
+              %textarea.textarea{:placeholder => "Add a comment..."}
+            %nav.level
+              .level-left
+                .level-item
+                  %a.button.is-info Post comment
+              .level-right
+                .level-item
+                  %label.checkbox
+                    %input{:type => "checkbox"}/
+                    Press enter to submit
+
+
+      -# components / pagination
+
+      .box
+        %nav.pagination
+          %a.button Previous
+          %a.button Next page
+          %ul
+            %li
+              %a.button 1
+            %li
+              %span ...
+            %li
+              %a.button 45
+            %li
+              %a.button.is-primary 46
+            %li
+              %a.button 47
+            %li
+              %span ...
+            %li
+              %a.button 86
+
+      -# components / pagination
+
+      .box
+        .tabs.is-centered
+          %ul
+            %li.is-active
+              %a Pictures
+            %li
+              %a Music
+            %li
+              %a Videos
+            %li
+              %a Documents
